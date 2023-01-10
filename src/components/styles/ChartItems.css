@@ -1,0 +1,97 @@
+.ChartItems {
+    padding: 30px;
+}
+.chart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px lightgray solid;
+}
+.chart-header h2 {
+    font-size: 2em;
+}
+.chart-clear {
+    color: #8d8d8d;
+    cursor: pointer;
+}
+.chart-clear span {
+    display: inline-block;
+    font-size: 1.2em;
+    margin-left: 2px;
+}
+.chart-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px lightgray solid;
+}
+.chart-footer .total {
+    font-size: 1.4em;
+}
+.order {
+    font-size: 1.1em;
+    text-align: center;
+    cursor: pointer;
+    padding: 12px 25px;
+    color: white;
+    background-color: #fe5f1e;
+    border-radius: 30px;
+    width: 200px;
+    margin: auto;
+    margin-top: 40px;
+    transition: background-color .15s ease-in-out;
+}
+.order:hover {
+    background-color: #f24701;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.6);
+}
+.order-confirmation {
+    display: block;
+    width: 600px;
+    max-width: 100%;
+    min-height: 400px;
+    max-height: 100%;
+    position: fixed;
+    z-index: 100;
+    left: 50%;
+    top: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
+    animation-name: appear;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+.order-confirmation svg {
+    transform: rotate(45deg);
+    margin: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+.order-confirmation p {
+    width: 80%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2em;
+}
+@keyframes appear {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}

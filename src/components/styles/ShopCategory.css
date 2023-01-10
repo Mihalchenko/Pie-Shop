@@ -1,0 +1,72 @@
+.ShopCategory {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    padding: 30px 10px;
+    margin: 0 auto;
+}
+.category nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+.category nav a {
+    background-color: #f9f9f9;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 10px;
+    padding: 13px 30px;
+    transition: background-color .1s ease-in-out;
+    width: 140px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.category nav a:hover {
+    background-color: #f4f4f4;
+}
+.category nav a.active {
+    background-color: #282828;
+    color: #fff;
+}
+.sort {
+    padding-left: 20px;
+    position: relative;
+    text-align: center;
+}
+.sort span {
+    border-bottom: 1px dashed #fe5f1e;
+    color: #fe5f1e;
+    cursor: pointer;
+}
+.sort-list {
+    text-align: center;
+    border: 1px lightgray solid;
+    margin-top: 5px;
+    border-radius: 10px;
+    position: absolute;
+    opacity: 1;
+    animation-name: appear;
+    animation-iteration-count: 1;
+    animation-duration: 0.6s;
+}
+.sort-list ul li {
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+.sort-list ul li:hover {
+    background-color: rgba(254,95,30, 0.5);
+}
+.sort-list ul li.active {
+    color: #fe5f1e;
+    font-weight: 700;
+}
+.sort-list ul li.active:hover {
+    color: black;
+}
+@keyframes appear {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}

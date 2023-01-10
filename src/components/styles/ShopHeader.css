@@ -1,0 +1,134 @@
+.ShopHeader {
+    width: 95%;
+    padding: 40px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    border-bottom: 1px lightgray solid;
+    flex-wrap: wrap;
+}
+
+.search {
+    position: relative;
+}
+
+.logo-button {
+    display: flex;
+}
+
+.logo-button img {
+    width: 50px;
+    margin-right: 15px;
+    background-color: #ffdf8c;
+    border-radius: 10px;
+}
+
+.search-icon {
+    height: 22px;
+    left: 14px;
+    opacity: .3;
+    position: absolute;
+    top: 12px;
+    width: 22px;
+}
+
+.search-input {
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 12px 20px 12px 42px;
+    width: 460px;
+}
+
+.chart-button {
+    align-items: center;
+    display: flex;
+    line-height: 23px;
+    padding: 12px 25px;
+    color: white;
+    background-color: #fe5f1e;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color .15s ease-in-out;
+}
+
+.chart-button:hover {
+    background-color: #f24701;
+}
+
+.chart-button .delimiter {
+    background-color: hsla(0,0%,100%,.25);
+    height: 25px;
+    margin-left: 14px;
+    margin-right: 14px;
+    width: 1px;
+}
+
+.chart-button svg {
+    margin-right: 6px;
+}
+
+.search-cancel {
+    cursor: pointer;
+    height: 18px;
+    opacity: .3;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 18px;
+}
+
+.search-cancel:hover {
+    opacity: .8;
+}
+
+@media (max-width: 1200px) {
+    .search-input {
+        width: 300px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .ShopHeader {
+        flex-wrap: wrap;
+    }
+    .search {
+        order: 1;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .search-input {
+        width: 450px;
+    }
+}
+
+@media (max-width: 680px) {
+    .ShopHeader {
+        display: block;
+        padding: 20px 5px;
+    }
+    .logo a {
+        justify-content: center;
+    }
+    .search {
+        width: 80%;
+        margin: auto;
+        margin-top: 15px;
+    }
+    .search-input {
+        width: 100%;
+    }
+    .chart {
+        width: 180px;
+        margin: auto;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .logo-button h1 {
+        font-size: 21px;
+    }
+}

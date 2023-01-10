@@ -1,0 +1,25 @@
+.chart-empty {
+    text-align: center;
+    padding: 30px;
+}
+.chart-empty img {
+    max-width: 450px;
+    display: block;
+    margin: auto;
+}
+.chart-empty h1 {
+    margin-bottom: 10px;
+}
+.go-to-main {
+    display: inline-block;
+    font-size: 22px;
+    background-color: #232323;
+    color: white;
+    padding: 12px 38px;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: background-color .2s ease-in-out;
+}
+.go-to-main:hover {
+    background-color: rgba(35, 35, 35, 0.7);
+}

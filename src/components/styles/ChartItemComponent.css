@@ -1,0 +1,124 @@
+.ChartItem {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.ChartItem img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.chart-item-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    justify-content: space-around;
+}
+.chart-item-info h3 {
+    padding: 10px;
+}
+.chart-item-description {
+    font-style: italic;
+    text-align: center;
+    padding-top: 5px;
+    color: #4f4f4f;
+}
+.chart-item-amount {
+    font-size: 20px;
+    text-align: center;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ChartItem-remove {
+    overflow: hidden;
+    animation-name: item-disappear;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+.chart-item-amount span {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+.delete-chart-item svg {
+    transform: rotate(45deg);
+    border: 1px #8d8d8d solid;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color .15s ease-in-out;
+}
+.delete-chart-item svg:hover {
+    background-color: #2a2a2a;
+}
+.delete-chart-item svg:hover path {
+    fill: white;
+}
+.chart-item-name {
+    width: 200px;
+    font-size: 1.3em;
+}
+.chart-item-amount-change {
+    color: #fe5f1e;
+    background-color: white;
+    border-color: #fe5f1e;
+    transition: background-color .15s ease-in-out;
+}
+.chart-item-amount-change:hover {
+    background-color: #fe5f1e;
+    color: white;
+    border-color: white;
+}
+.chart-item-amount-change-disabled {
+    color: #8d8d8d;
+    border-color: #8d8d8d;
+}
+.chart-item-price {
+    width: 90px;
+}
+
+@keyframes item-disappear {
+    0%   { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@media (max-width: 680px) {
+    .chart-footer {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .chart-footer * {
+        width: 100%;
+    }
+    .chart-item-info {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+    }
+    .chart-item-info .chart-item-name {
+        grid-column: span 2;
+    }
+    .chart-item-info .chart-item-price {
+        text-align: center;
+        width: 100%;
+    }
+}
+@media (max-width: 420px) {
+    .chart-header h2 {
+        width: 100%;
+    }
+    div.chart-header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .chart-item-info .chart-item-name, .chart-item-info img {
+        grid-column: span 3;
+        justify-self: center;
+    }
+}
